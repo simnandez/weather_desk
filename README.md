@@ -1,13 +1,10 @@
-# WeatherDesk has moved!
-# Now at [GitLab](https://gitlab.com/bharadwaj-raju/WeatherDesk)!
-
 # WeatherDesk
 
-Change the wallpaper based on the weather and (optionally) the time.
-
-![WeatherDesk](http://i.imgur.com/F2Lml2n.png)
+Change the wallpaper based on Mojave theme and the local time.
 
 Thanks to [Martin Hansen](http://stackoverflow.com/users/2118300/martin-hansen) for the original `Desktop.py` module.
+
+Powered by
 
 [![Powered by OpenWeatherMap!](https://openweathermap.org/themes/openweathermap/assets/img/openweather-negative-logo-RGB.png)](https://openweathermap.org)
 
@@ -19,78 +16,16 @@ Just download the repository, get some wallpapers (see [the Wallpapers section](
 
 ## Options
 
-    $ python3 WeatherDesk.py --help
-    usage: WeatherDesk.py [-h] [-d directory] [-f format] [-w seconds]
-                          [-t [{2,3,4}]] [-n] [--no-weather] [-c name [name ...]]
-                          [-o]
-
-    WeatherDesk - Change the wallpaper based on the weather
-            (Uses the Yahoo! Weather API)
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      -d directory, --dir directory
-                            Specify wallpaper directory. Default: ~/.weatherdesk_walls
-      -f format, --format format
-                            Specify image file format. Default: .jpg
-      -w seconds, --wait seconds
-                            Specify time (in seconds) to wait before updating. Default: 600
-      -t [{2,3,4}], --time [{2,3,4}]
-                            Use different backgrounds for different times.
-
-                                Variations:
-                                  2 = day/night
-                                  3 = day/evening/night [Default]
-                                  4 = morning/day/evening/night
-
-                                See --naming.
-      -n, --naming          Show the image file-naming rules and exit.
-      --no-weather          Disable the weather functionality of the script. Wallpapers will only be changed based on the time of day.With this option, no internet connection is required.
+    $ python3 WeatherDesk.py
       -c name [name ...], --city name [name ...]
                             Specify city for weather. If not given, taken from ipinfo.io.
-      -o, --one-time-run    Run once, then exit.
-
+    
+**Example:** WeatherDesk.py -c paris
 
 ## Wallpapers
 
+Put the .weatherdesk_walls directory in the default `~/.weatherdesk_walls/` directory or specify a directory with the `--dir` option.
 **You can choose your own custom set**, conforming to the [naming rules](#naming-of-pictures).
-Either put them in the default `~/.weatherdesk_walls/` directory or specify a directory with the `--dir` option.
-
-### Ready-to-Go wallpaper set
-
-**Don't want to go hunting for wallpapers?** I recommend [this beautiful set (called FireWatch, named after a game)](http://imgur.com/a/snB5O) (download the set using the ZIP file link given below) made by redditor JuniorNeves.
-
-**A zip download of the FireWatch set, named according to the rules:** [ZIP download](https://github.com/bharadwaj-raju/FireWatch-WeatherDesk-Pack/archive/master.zip). Just extract it into `~/.weatherdesk_walls` (or into any directory and pass its path with `--dir`)
-
-
-### Naming of Pictures
-
-    $ python3 WeatherDesk.py --naming
-    This is how to name files in the wallpaper directory:
-
-
-           WEATHER           |    FILENAME
-    _________________________|________________
-     Clear, Calm, Fair:      | normal.jpg
-     Thunderstorm:           | thunder.jpg
-     Windy, Breeze, Gale:    | wind.jpg
-     Drizzle, Rain, Showers: | rain.jpg
-     Snow:                   | snow.jpg
-     Cloudy:                 | cloudy.jpg
-     Other:                  | normal.jpg
-
-     If using with --time or --time 3, add:
-     "day-", "night-" or "evening-" in front of filename.
-
-     If using with --time 4, add:
-     "morning-", "day-", "evening-" or "night-"
-
-     If using with --time 2, add:
-     "day-" or "night-"
-
-     If you use --no-weather, the files have to be named simply after the time of day depending of your time schema.
-     E.g.: "day.jpg", "night.jpg"
-
 
 ## Supported Platforms
 
@@ -100,6 +35,7 @@ Either put them in the default `~/.weatherdesk_walls/` directory or specify a di
   - Awesome WM
   - Blackbox
   - Cinnamon
+  - Deepin
   - Enlightenment
   - Fluxbox
   - Gnome 2
