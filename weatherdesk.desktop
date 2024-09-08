@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=WeatherDesktop
+Comment=WeatherDesktop and FireWatch
+Exec=/usr/local/bin/WeatherDesk -t 4
+Icon=/opt/WeatherDesk/communityIcon_gupxos5vfkg01.jpg
+Terminal=false
